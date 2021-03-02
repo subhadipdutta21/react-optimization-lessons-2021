@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const FetchData = () => {
+const FetchData = ({ count }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -17,6 +17,7 @@ const FetchData = () => {
 
   return (
     <ul>
+      {count}
       {loading && "Loading please wait.........."}
       {!loading && data?.map((itm) => <li key={itm.id}>{itm.title}</li>)}
     </ul>

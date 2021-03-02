@@ -2,7 +2,6 @@ import "./styles.css";
 import React, { useCallback, useMemo, useState } from "react";
 import Count from "./count";
 import MyButton from "./MyButton";
-import FetchData from "./fetchData";
 
 export default function App() {
   const [count, setCount] = useState(1);
@@ -50,7 +49,6 @@ export default function App() {
       <MyButton txt={"(+) INCR Age"} onclick={incrAge} />
       <MyButton txt={"(-) DECR Age"} onclick={decrAge} />
       <hr />
-      <FetchData />
     </div>
   );
 }
